@@ -20,13 +20,7 @@ const Overview = () => {
   } = useContext(DashboardContext);
 
   const data = eventHistory.filter((event) => event.applicationId == id);
-  // const data = [
-  //   { event: "Event 1", version: "v1", status: "Active", key: "Key 1" },
-  //   { event: "Event 2", version: "v2", status: "Inactive", key: "Key 2" },
-  //   { event: "Event 3", version: "v3", status: "Active", key: "Key 3" },
-  //   { event: "Event 4", version: "v4", status: "Inactive", key: "Key 4" },
-  //   { event: "Event 5", version: "v5", status: "Active", key: "Key 5" },
-  // ];
+
   return (
     <div className="p-4 px-10 ">
       <div className="flex flex-col gap-4 p-4 bg-white rounded-md shadow ">
@@ -39,7 +33,7 @@ const Overview = () => {
             <div className=" text-gray">Current Version</div>
             {version === desiredVersion ? (
               <div className="flex items-center gap-2">
-                <img src={tick} alt="" />
+                <img src={tick} alt="A success tick" />
                 <div>In Sync</div>
               </div>
             ) : (
@@ -124,17 +118,20 @@ const Overview = () => {
                     <td className="px-16 py-4 text-left whitespace-no-wrap">
                       {row.status === "successful" ? (
                         <div className="flex text-[#00B88C] border-[#00B88C] gap-1 px-2 border rounded-md w-max">
-                          <img src={greendot} alt="" />
+                          <img src={greendot} alt="A green indicator circle" />
                           Successful
                         </div>
                       ) : row.status === "in_progress" ? (
                         <div className="flex text-[#F39C12] border-[#F39C12] gap-1 px-2 border rounded-md w-max">
-                          <img src={yellowdot} alt="" />
+                          <img
+                            src={yellowdot}
+                            alt="A yellow indicator circle"
+                          />
                           In progress
                         </div>
                       ) : (
                         <div className="flex text-[#E91F04] border-[#E91F04] gap-1 px-2 border rounded-md w-max">
-                          <img src={reddot} alt="" />
+                          <img src={reddot} alt="A red indicator circle" />
                           Failed
                         </div>
                       )}

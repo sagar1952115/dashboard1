@@ -23,7 +23,7 @@ const Sidebar = () => {
           open ? "justify-start" : "justify-center"
         } items-center w-full  h-20 p-4 px-5 gap-4 border-b cursor-pointer border-gray`}
       >
-        <img src={logo} alt="" />
+        <img src={logo} alt="Logo of Kapstan" />
         {open ? (
           <span className="text-2xl font-semibold text-white duration-500 transform">
             Kapstan
@@ -36,7 +36,7 @@ const Sidebar = () => {
       <div className="flex flex-col flex-1 gap-6 p-4">
         <div className="flex items-center  relative  rounded  bg-[#4D1B95]">
           <div className="w-[46px] h-[46px] p-1 flex items-center justify-center">
-            <img src={application} alt="" />
+            <img src={application} alt="Logo of appliation" />
           </div>
           {open && (
             <span className="absolute text-lg text-white duration-500 transform left-12">
@@ -46,7 +46,7 @@ const Sidebar = () => {
         </div>
         <div className="flex items-center  relative  rounded  hover:bg-[#4D1B95]">
           <div className="w-[46px] h-[46px] p-1 flex items-center justify-center">
-            <img src={link} alt="" />
+            <img src={link} alt="A link icon" />
           </div>
           {open && (
             <span className="absolute text-lg text-white duration-500 transform left-12">
@@ -56,7 +56,7 @@ const Sidebar = () => {
         </div>
         <div className="flex items-center  relative  rounded  hover:bg-[#4D1B95]">
           <div className="w-[46px] h-[46px] p-1 flex items-center justify-center">
-            <img src={cost} alt="" />
+            <img src={cost} alt="A doller icon" />
           </div>
           {open && (
             <span className="absolute text-lg text-white duration-500 transform left-12">
@@ -66,7 +66,7 @@ const Sidebar = () => {
         </div>
         <div className="flex items-center  relative  rounded  hover:bg-[#4D1B95]">
           <div className="w-[46px] h-[46px] p-1 flex items-center justify-center">
-            <img src={security} alt="" />
+            <img src={security} alt="A sheild icon" />
           </div>
           {open && (
             <span className="absolute text-lg text-white duration-500 transform left-12">
@@ -81,7 +81,7 @@ const Sidebar = () => {
       <div className="flex flex-col gap-6 p-4 ">
         <div className="flex items-center  relative  rounded  hover:bg-[#4D1B95]">
           <div className="w-[46px] h-[46px] p-1 flex items-center justify-center">
-            <img src={user} alt="" />
+            <img src={user} alt="A user icon" />
           </div>
           {open && (
             <span className="absolute text-lg text-white duration-500 transform left-12">
@@ -91,7 +91,7 @@ const Sidebar = () => {
         </div>
         <div className="flex items-center  relative  rounded  hover:bg-[#4D1B95]">
           <div className="w-[46px] h-[46px] p-1 flex items-center justify-center">
-            <img src={save} alt="" />
+            <img src={save} alt="A docs icon" />
           </div>
           {open && (
             <span className="absolute text-lg text-white duration-500 transform left-12">
@@ -103,7 +103,7 @@ const Sidebar = () => {
           onClick={() => setOpen(!open)}
           className={`flex items-center justify-center rounded w-[46px] h-[46px] hover:bg-[#4D1B95]`}
         >
-          <img src={arrow} alt="" />
+          <img src={arrow} alt="A double left facing icon" />
         </div>
       </div>
     </div>

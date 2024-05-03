@@ -13,11 +13,9 @@ const Dropdown = () => {
     <div className="relative">
       <select
         id="custom-dropdown"
-        // value={selectedApp.name}
         onChange={handleChange}
         className="block w-full py-2 pr-8 leading-tight bg-transparent border-gray-400 rounded appearance-none hover:border-gray-500 focus:outline-none focus:shadow-outline"
       >
-        {/* <option value="">Select an option</option> */}
         {applications.map((curr) => {
           return (
             <option key={curr.id} value={JSON.stringify(curr)}>

@@ -11,8 +11,6 @@ const EnvironmentVariableDrawer = ({
   setVariables,
   handleChangeValue,
 }) => {
-  const [error, setError] = useState("");
-
   const { selectedApp } = useContext(DashboardContext);
 
   useEffect(() => {
@@ -35,7 +33,6 @@ const EnvironmentVariableDrawer = ({
   }, [variables]);
 
   const handleSave = () => {
-    // Check if any input field is empty
     const isEmpty = variables.some(
       (variable) => !variable.key || !variable.value
     );
@@ -43,7 +40,6 @@ const EnvironmentVariableDrawer = ({
       setError("All fields are required.");
     } else {
       setError("");
-      // Do something with the variables, like sending them to a server
       console.log("Variables:", variables);
     }
   };
@@ -82,14 +78,13 @@ const EnvironmentVariableDrawer = ({
               className="cursor-pointer"
               onClick={() => handleDeleteVariable(index)}
               src={deleteIcon}
-              alt=""
+              alt="A delete icon"
             />
           </div>
         ))}
 
         <div className="flex justify-end gap-4">
           <button
-            // onClick={handleSave}
             onClick={closeDrawer}
             className="p-1 px-4 py-1 ml-2 font-bold bg-white border rounded text-gray border-gray"
           >
